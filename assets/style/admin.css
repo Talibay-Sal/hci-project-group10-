@@ -1,0 +1,157 @@
+/* General Reset for Box Model */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Responsive Navigation Bar */
+.top-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
+
+.nav-logo {
+    width: 50px; /* Scalable logo */
+    margin-right: 15px;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+    list-style-type: none;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.nav-links li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.nav-links li a:hover {
+    color: #3498db;
+}
+
+.profile-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+/* Responsive Rules */
+@media (max-width: 768px) {
+    .top-nav {
+        flex-direction: column; /* Stack navigation vertically */
+        align-items: center;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-left, .nav-right {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .profile-icon {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Admin Panel Links Section */
+.admin-panel-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Enable wrapping for small screens */
+    gap: 15px;
+    margin: 20px auto;
+}
+
+.link-column {
+    flex: 1 1 200px; /* Adjust width for responsiveness */
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #c1e5ee;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.link-column a {
+    text-decoration: none;
+    color: #2c3e50;
+}
+
+.link-column h3 {
+    font-size: 18px;
+    color: #2c3e50;
+}
+
+.link-column:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .link-column {
+        flex: 1 1 80%; /* Reduce column width for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .link-column {
+        flex: 1 1 100%; /* Full width for phones */
+    }
+}
+
+/* Table Responsiveness */
+.trips-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.trips-table th, .trips-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+@media (max-width: 768px) {
+    .trips-table, .trips-table th, .trips-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .trips-table th {
+        display: none;
+    }
+
+    .trips-table td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .trips-table td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        margin-right: 10px;
+    }
+}
