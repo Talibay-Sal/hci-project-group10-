@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact US</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+
+    <!-- Top Contact Bar -->
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <i class="phone-icon">📞</i><span>+220 7917366</span>
+            <i class="email-icon">📧</i><span>ssalieu92@gmail.com</span>
+        </div>
+        <div class="top-bar-right">
+            <a href="booking.html" class="booking-link">Booking Online Taxi</a>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="header-left">
+            <img src="sj.png" alt="Taxi Logo" class="logo">
+        </div>
+        <nav class="header-right">
+            <a href="index.html">HOME</a>
+            <a href="booking.html">BOOKING</a>
+            <a href="prices.html">PRICES</a>
+            <a href="galary.html">GALARY</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+    </header>
+
+<!-- Hero Section -->
+<section class="contact-section">
+    <h1>Contact Us</h1>
+    <p>We're here to assist you 24/7. Reach out to us through any of the following methods.</p>
+
+    <div class="contact-info">
+        <div class="contact-item">
+            <i class="icon-phone"></i>
+            <h3>Phone</h3>
+            <p><a href="tel:+2207007785">+2207917366</a></p>
+        </div>
+
+        <div class="contact-item">
+            <i class="icon-envelope"></i>
+            <h3>Email</h3>
+            <p><a href="mailto:blayeras@hotmail.com">ssalieu92@gmail.com</a></p>
+        </div>
+
+        <div class="contact-item">
+            <i class="icon-location"></i>
+            <h3>Address</h3>
+            <p>SeneGambia, Banjul, The Gambia</p>
+        </div>
+
+        <div class="contact-item">
+            <i class="icon-clock"></i>
+            <h3>Availability</h3>
+            <p>We are available 24/7 to serve you.</p>
+        </div>
+    </div>
+</section>
+
+
+<section class="services">
+    <h2>Welcome Our Services</h2>
+    <div class="services-container">
+        <div class="service-item">
+            <div class="service-icon">
+                <img src="cityride.png" alt="Service Icon 1">
+            </div>
+            <h3>CITY TRANSPORTATION</h3>
+            <p>Enjoy fast, reliable taxi service for convenient city travel, tailored to get you around town with ease</p>
+        </div>
+        <div class="service-item">
+            <div class="service-icon">
+                <img src="airportride.png" alt="Service Icon 2">
+            </div>
+            <h3>AIRPORT TRANSPORTATION</h3>
+            <p>Reach your flight stress-free with our timely airport taxi service, ensuring a smooth ride to and from the terminal.</p>
+        </div>
+        <div class="service-item">
+            <div class="service-icon">
+                <img src="outsidecountry.png" alt="Service Icon 3">
+            </div>
+            <h3>OUTSIDE THE COUNTRY</h3>
+            <p>Experience comfortable and secure cross-border taxi service for travel beyond the city limits, ensuring hassle-free journeys to international destinations.</p>
+        </div>
+    </div>
+</section>
+
+<section class="faqs">
+    <div class="faqs-container">
+        <div class="faqs-left">
+            <h2>FAQs</h2>
+            <div class="faq-item">
+                <div class="faq-title" onclick="toggleFAQ(1)">
+                    <h3>What payment methods do you accept?</h3>
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="faq-content" id="faq-1">
+                    <p>We accept cash and major credit cards for your convenience.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-title" onclick="toggleFAQ(2)">
+                    <h3>How can I book a taxi?</h3>
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="faq-content" id="faq-2">
+                    <p>You can book a taxi through our website or mobile app easily.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-title" onclick="toggleFAQ(3)">
+                    <h3>What if I need to cancel my booking?</h3>
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="faq-content" id="faq-3">
+                    <p>You can cancel your booking through your account on our website.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-title" onclick="toggleFAQ(4)">
+                    <h3>Do you provide child seats?</h3>
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="faq-content" id="faq-4">
+                    <p>Yes, we can provide child seats upon request at the time of booking.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-title" onclick="toggleFAQ(5)">
+                    <h3>Can I schedule a ride in advance?</h3>
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="faq-content" id="faq-5">
+                    <p>Absolutely! You can schedule your ride for any time you need.</p>
+                </div>
+            </div>
+        </div>
+        <div class="faqs-right">
+            <img src="FAQS.jpg" alt="FAQs Image">
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-left">
+            <img src="sj.png" alt="Logo" class="footer-logo">
+            <p>Your trusted taxi service, providing safe and reliable transportation.</p>
+        </div>
+        <div class="footer-middle">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="prices.html">Prices</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-right">
+            <h3>Contact Info</h3>
+            <div class="contact-info">
+                <p><i class="fas fa-phone"></i> +2207917366</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:example@example.com">ssalieu92@gmail.com</a></p>
+                <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/2203717366"> WhatsApp</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 SJ TOUR | <a href="https://wa.me/2203717366">Contact Us on WhatsApp</a></p>
+    </div>
+</footer>
+
+
+    
+<script src="script.js"></script>
+</body>
+</html>

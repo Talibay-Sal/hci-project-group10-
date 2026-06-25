@@ -1,0 +1,785 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: beige;
+}
+
+/* Top Contact Bar */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #222;
+    color: white;
+    padding: 10px;
+}
+
+.booking-link {
+    color: #ff9900;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header-left .logo {
+    width: 60px;
+}
+
+/* Navigation Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+.header-right a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.header-right a:hover {
+    color: #ff9900;
+}
+
+/* Hero Section Styling */
+.hero-section {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    height: 60vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.hero-content {
+    color: white;
+    margin: 20px;
+    max-width: 400px;
+}
+
+.hero-content h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.book-ride-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff9900;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.book-ride-btn:hover {
+    background-color: #cc7a00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .book-ride-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .header-right, .form-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/* Booking Section Styling */
+.booking-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-image: url('path/to/your-background-image.jpg'); /* Replace with the path to your background image */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.booking-section h2 {
+    font-size: 2rem;
+    color: #ff9900;
+    margin-bottom: 30px;
+}
+
+.booking-form-container {
+    display: flex;
+    justify-content: center;
+}
+
+.booking-form {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.form-left, .form-right {
+    flex: 1;
+    padding: 10px;
+}
+
+label {
+    color: #ff9900;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="text"], input[type="tel"], input[type="email"] {
+    color: #333;
+}
+
+.book-now-btn {
+    background-color: #ff9900;
+    color: white;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    max-width: 200px;
+}
+
+.book-now-btn:hover {
+    background-color: #cc7a00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .booking-form {
+        flex-direction: column;
+    }
+
+    .form-left, .form-right {
+        width: 100%;
+        padding: 0;
+    }
+}
+#customPickupTime {
+    margin-top: 10px;
+}
+
+/* General styling for the section */
+.places-to-visit {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: beige;
+}
+
+.places-to-visit h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Grid layout for the places */
+.places-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.place-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.place-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.place-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.place-item h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin: 15px 0 5px;
+}
+
+.place-item p {
+    font-size: 0.9em;
+    color: #666;
+    padding: 0 15px 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .places-to-visit {
+        padding: 30px 10px;
+    }
+
+    .place-item img {
+        height: 180px;
+    }
+}
+/* General styling for the expert driver section */
+.expert-driver {
+    padding: 50px 20px;
+    background-color: bisque;
+    text-align: center;
+}
+
+.expert-driver h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Profile layout */
+.driver-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Driver image styling */
+.driver-image {
+    flex: 0 0 150px; /* Fixed width for the image */
+    border-radius: 50%; /* Circular image */
+    overflow: hidden; /* Ensure the image fits within the circle */
+    margin-right: 20px; /* Space between image and details */
+}
+
+.driver-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%; /* Circular */
+    object-fit: cover; /* Cover the circle */
+}
+
+/* Driver details styling */
+.driver-details {
+    flex: 1; /* Take remaining space */
+    text-align: left; /* Align text to the left */
+}
+
+.driver-details h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.driver-details p {
+    font-size: 1em;
+    color: #666;
+    margin: 5px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .driver-profile {
+        flex-direction: column; /* Stack image and details vertically */
+        align-items: center; /* Center align items */
+    }
+
+    .driver-image {
+        margin: 0 0 ; /* Margin below image */
+        max-width: 100%;
+        flex: 0 0 40%;
+    }
+    .driver-image img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+    .driver-image img {
+        margin: 0 0 20px; /* Margin below image */
+        max-width: 100%;
+        flex: 0 0 40%;
+    }
+
+    .driver-details {
+        text-align: center; /* Center align text on small screens */
+    }
+}
+
+/* General styling for the services section */
+.services {
+    padding: 50px 20px;
+    background-color: blanchedalmond;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Container for service items */
+.services-container {
+    display: flex;
+    justify-content: space-around; /* Distribute space evenly */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Individual service item styling */
+.service-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 300px; /* Flexible width, minimum 300px */
+    max-width: 300px; /* Max width for each column */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.service-item:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Icon styling */
+.service-icon {
+    margin-bottom: 15px;
+}
+
+.service-icon img {
+    width: 60px; /* Fixed width for icons */
+    height: auto;
+}
+
+/* Title and paragraph styling */
+.service-item h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .services-container {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center items */
+    }
+    .driver-image {
+        flex: 0 0 40%;
+    }
+
+    .service-item {
+        max-width: 90%; /* Allow more width on small screens */
+    }
+}
+/* General styling for the FAQs section */
+.faqs {
+    padding: 50px 20px;
+    background-color: burlywood;
+}
+
+.faqs-container {
+    display: flex;
+    justify-content: space-between; /* Space out left and right columns */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Left column styling */
+.faqs-left {
+    flex: 1; /* Allow left column to take available space */
+    margin-right: 20px; /* Space between columns */
+}
+
+/* FAQs title styling */
+.faqs-left h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Individual FAQ item styling */
+.faq-item {
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px;
+    margin-bottom: 15px; /* Space between items */
+}
+
+/* Title of each FAQ */
+.faq-title {
+    display: flex;
+    justify-content: space-between; /* Space out title and arrow */
+    align-items: center; /* Center items vertically */
+    padding: 15px; /* Padding for clickable area */
+    cursor: pointer; /* Pointer on hover */
+    background-color: #f7f7f7; /* Light background for title */
+    border-radius: 5px 5px 0 0; /* Rounded corners on top */
+}
+
+/* Arrow styling */
+.arrow {
+    transition: transform 0.3s; /* Smooth transition for arrow rotation */
+}
+
+/* Content of each FAQ (hidden by default) */
+.faq-content {
+    display: none; /* Hidden by default */
+    padding: 15px; /* Padding for content */
+    border-top: 1px solid #ddd; /* Line separating title and content */
+}
+
+/* Right column styling */
+.faqs-right {
+    flex: 1; /* Allow right column to take available space */
+    text-align: center; /* Center image */
+}
+
+/* Image styling */
+.faqs-right img {
+    max-width: 100%; /* Responsive image */
+    height: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .faqs-container {
+        flex-direction: column; /* Stack columns on smaller screens */
+        align-items: center; /* Center items */
+    }
+
+    .faqs-left {
+        margin-right: 0; /* Remove margin on small screens */
+        margin-bottom: 20px; /* Space below left column */
+    }
+}
+
+/* General footer styling */
+footer {
+    background-color: #333; /* Dark background for the footer */
+    color: #fff; /* White text for contrast */
+    padding: 40px 20px; /* Padding for spacing */
+    font-family: Arial, sans-serif; /* Font style */
+}
+
+/* Footer container */
+.footer-container {
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space out columns */
+    align-items: flex-start; /* Align items to the top */
+}
+
+/* Left column styling */
+.footer-left {
+    flex: 1; /* Allow to take available space */
+}
+
+/* Footer logo styling */
+.footer-logo {
+    max-width: 150px; /* Limit logo size */
+    margin-bottom: 15px; /* Space below logo */
+}
+
+/* Middle column styling */
+.footer-middle {
+    flex: 1; /* Allow to take available space */
+    text-align: center; /* Center align text */
+}
+
+/* Quick Links title styling */
+.footer-middle h3 {
+    margin-bottom: 15px; /* Space below title */
+}
+
+/* List styling */
+.footer-middle ul {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0; /* Remove padding */
+}
+
+/* List item styling */
+.footer-middle ul li {
+    margin-bottom: 10px; /* Space between links */
+}
+
+/* List link styling */
+.footer-middle ul li a {
+    color: #fff; /* White links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.footer-middle ul li a:hover {
+    color: #f39c12; /* Change color on hover */
+}
+
+/* Right column styling */
+.footer-right {
+    flex: 1; /* Allow to take available space */
+    text-align: right; /* Align text to the right */
+}
+
+/* Contact info styling */
+.contact-info {
+    line-height: 1.6; /* Spacing between lines */
+}
+
+/* Bottom section styling */
+.footer-bottom {
+    text-align: center; /* Center align text */
+    margin-top: 20px; /* Space above bottom section */
+    font-size: 0.9em; /* Smaller font size */
+}
+
+/* Copyright link styling */
+.footer-bottom a {
+    color: #f39c12; /* Highlighted color for links */
+    text-decoration: none; /* Remove underline */
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack columns on smaller screens */
+        align-items: center; /* Center items */
+    }
+}
+/*prices page*/
+
+/* General Page Styling */
+
+
+header.tariff-header {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #98c4ef;
+}
+
+header.tariff-header h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+header.tariff-header p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Tariff Table Section */
+.tariff-section {
+    padding: 40px 20px;
+    background-color: bisque;
+}
+
+.tariff-container {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tariff-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.3s ease;
+}
+
+.tariff-row:nth-child(even) {
+    background-color: #f0a8ea;
+}
+.tariff-row:nth-child(odd) {
+    background-color: #788fcd;
+}
+
+.tariff-row:hover {
+    background-color: #eaeaea;
+}
+
+.tariff-header-row {
+    background-color: #f39c12;
+    color: white;
+    font-weight: bold;
+}
+
+.tariff-col {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    font-size: 1em;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .tariff-container {
+        max-width: 100%;
+    }
+
+    .tariff-row {
+        flex-direction: column;
+    }
+
+    .tariff-col {
+        text-align: left;
+        padding: 5px;
+    }
+
+    .tariff-header-row {
+        font-size: 1.2em;
+    }
+}
+
+
+/* contact page */
+
+/* General Page Styling */
+
+
+.contact-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: rgb(198, 154, 240);
+}
+
+.contact-section h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+.contact-section p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Contact Info Styling */
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.contact-item {
+    width: 220px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: scale(1.05);
+}
+
+.contact-item i {
+    font-size: 2.5em;
+    color: #f39c12;
+    margin-bottom: 15px;
+}
+
+.contact-item h3 {
+    font-size: 1.3em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.contact-item p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.contact-item a {
+    color: #f39c12;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+/* Icons Styling */
+.icon-phone:before { content: "📞"; }
+.icon-envelope:before { content: "✉️"; }
+.icon-location:before { content: "📍"; }
+.icon-clock:before { content: "⏰"; }
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .contact-item {
+        width: 90%;
+    }
+
+    .contact-info {
+        gap: 20px;
+    }
+}
